@@ -1,5 +1,7 @@
 // components/Footer.js
 import styles from './Footer.module.css';
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
     return (
@@ -8,9 +10,9 @@ const Footer = () => {
                 <div className={styles.section}>
                     <h3>Quick Link</h3>
                     <ul>
-                        <li><a href="/src/app/about">About us</a></li>
-                        <li><a href="/src/app/contact">Contact us</a></li>
-                        <li><a href="/src/app/shop">Shop</a></li>
+                        <li><Link href={"/about"}>About Us</Link></li>
+                        <li><Link href={"/contact"}>Contact us</Link></li>
+                        <li><Link href={"/shop"}>Shop</Link></li>
                     </ul>
                 </div>
                 <div className={styles.section}>
@@ -24,10 +26,11 @@ const Footer = () => {
             </div>
             <div className={styles.container}>
                 <div className={styles.socialMedia}>
-                    <a href="#"><img src="/facebook-icon.png" alt="Facebook"/></a>
-                    <a href="#"><img src="/instagram-icon.png" alt="Instagram"/></a>
+                    <a href="#"><Image src="/facebook.png" alt="Facebook" width={24} height={24}/></a>
+                    <a href="#"><Image src="/instagram.png" alt="Instagram" width={24} height={24}/></a>
                 </div>
             </div>
+            <hr/>
             <div className={styles.container}>
                 <div className={styles.copyright}>
                     &copy; 2024, BamBrush | All Rights Reserved

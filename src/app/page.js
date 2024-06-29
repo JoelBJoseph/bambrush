@@ -9,7 +9,11 @@ function Hero() {
         <div className="container">
           <h1>Welcome to Bambrush</h1>
           <h3>Introducing Bamboo Toothbrush - The Sustainable Alternative to Plastic Toothbrushes</h3>
-          <button>Learn More</button>
+          <button>
+              <Link href="/">
+                  Learn More
+              </Link>
+          </button>
         </div>
       </section>
   );
@@ -19,7 +23,7 @@ function ProductShowcase() {
   return (
       <section className="product-showcase">
           <div className="heading">
-              <h1>Shop🛒</h1><Link href="/shop">More→</Link>
+              <h1>Shop🛒</h1><Link href={"/shop"}>More→</Link>
           </div>
         <div className="container">
           {/* Add product images and animation here */}
@@ -87,7 +91,11 @@ function CallToAction() {
         <section className="cta">
             <div className="container">
                 <h2>Get Your BamBrush Today!</h2>
-                <button>Buy Now</button>
+                <button>
+                    <Link href={"/shop"}>
+                        Buy Now
+                    </Link>
+                </button>
             </div>
         </section>
     );
